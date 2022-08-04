@@ -165,7 +165,7 @@ export default {
 
     const saveCompany = async () => {
       await updateCurrentCompany(props.id, store.companyById);
-      await router.push({ name: "home" });
+      await router.push({ name: "home1" });
       await fetchAllCompanies();
     };
 

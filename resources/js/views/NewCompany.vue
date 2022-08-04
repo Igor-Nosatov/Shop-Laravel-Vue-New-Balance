@@ -158,7 +158,7 @@ export default {
 
     const saveCompany = async () => {
       await storeNewCompany({ ...form });
-      await router.push({ name: "home" });
+      await router.push({ name: "home1" });
       await fetchAllCompanies();
     };
 

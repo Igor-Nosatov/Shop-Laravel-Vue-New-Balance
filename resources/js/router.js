@@ -1,15 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm-bundler'
-import Home from './views/Home.vue'
-
+import Home1 from './views/Home1.vue'
+import Home from './views/Home/Home.vue'
 
 export default () => createRouter({
   history: createWebHistory(),
   routes: [
-   
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/home1',
+      name: 'home1',
+      component: Home1,
     },
     {
       path: '/new',

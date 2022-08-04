@@ -1,12 +1,14 @@
 <template>
-    <div id="app">
-   
-          <router-view />
-   
-    </div>
+  <div id="app">
+    <Header />
+    <router-view />
+    <Footer />
+  </div>
 </template>
 
 <script setup>
+import Header from "../components/HeaderComponent.vue"
+import Footer from "../components/FooterComponent.vue"
 
 </script>
 
@@ -16,7 +18,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 60px;
 }
 </style>
+
 

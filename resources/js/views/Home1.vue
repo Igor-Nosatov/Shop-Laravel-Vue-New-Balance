@@ -57,7 +57,7 @@ export default {
 
     const deleteCompany = async (id) => {
       await destroyByIdCompany(id);
-      await router.push({ name: "home" });
+      await router.push({ name: "home1" });
       await fetchAllCompanies();
     };
 
