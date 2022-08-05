@@ -7,6 +7,8 @@ import Home from "./views/Home/Home.vue";
 import Login from "./views/Auth/Login.vue";
 import Register from "./views/Auth/Register.vue";
 import Store from "./views/Store/Store.vue";
+import Product from "./views/Product/Product.vue";
+import Review from "./views/Review/Review.vue";
 
 export default () =>
   createRouter({
@@ -35,8 +37,16 @@ export default () =>
         name: "store",
         component: Store,
       },
-
-
+      {
+        path: "/product/:id",
+        name: "product",
+        component: Product,
+      },
+      {
+        path: "/review/:id",
+        name: "review",
+        component: Review,
+      },
 
 
       

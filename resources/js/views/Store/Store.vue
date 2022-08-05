@@ -3,6 +3,19 @@
     <div class="col-2"></div>
     <div class="col-8">
       <div class="row g-0">
+        <div class="col-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Men</a></li>
+              <li class="breadcrumb-item"><a href="#">Shoes</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Lifestyle
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="row g-0">
         <div class="col-3 p-2">
           <div class="category1 pt-4">
             <div
