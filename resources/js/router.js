@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router/dist/vue-router.esm-bundler'
 import Home1 from './views/Home1.vue'
 import Home from './views/Home/Home.vue'
+import Login from './views/Auth/Login.vue'
+import Register from './views/Auth/Register.vue'
 
 export default () => createRouter({
   history: createWebHistory(),
@@ -10,6 +12,24 @@ export default () => createRouter({
       name: 'home',
       component: Home,
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register,
+    },
+
+
+
+
+
+
+
+
     {
       path: '/home1',
       name: 'home1',
