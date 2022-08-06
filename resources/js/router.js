@@ -12,7 +12,6 @@ import Review from "./views/Review/Review.vue";
 import Cart from "./views/Cart/Cart.vue";
 import Account from "./views/Account/Account.vue";
 import Checkout from "./views/Checkout/Checkout.vue";
-import Contact from "./views/Contact/Contact.vue";
 import GiftCard from "./views/GiftCard/GiftCard.vue";
 
 export default () =>
@@ -70,12 +69,6 @@ export default () =>
         path: "/checkout",
         name: "checkout",
         component: Checkout,
-      },
-
-      {
-        path: "/contact",
-        name: "contact",
-        component: Contact,
       },
 
       {
