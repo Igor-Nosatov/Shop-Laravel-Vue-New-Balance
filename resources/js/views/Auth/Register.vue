@@ -1,7 +1,7 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="col-2"></div>
-    <div class="col-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-4 p-1">
       <h6 class="fw-bold text-start">Create account</h6>
       <p class="text-danger text-start">*Denotes a required field</p>
 
@@ -10,14 +10,14 @@
           <label for="inputFirstName" class="form-label text-start">
             <span class="required-input">*</span> First Name</label
           >
-          <input type="text" class="form-control" id="inputFirstName" />
+          <input type="text" class="form-control no-border" id="inputFirstName" />
         </div>
 
         <div class="mb-3 text-start">
           <label for="inputLastName" class="form-label text-start"
             ><span class="required-input">*</span> Last Name</label
           >
-          <input type="text" class="form-control" id="inputLastName" />
+          <input type="text" class="form-control no-border" id="inputLastName" />
         </div>
 
         <div class="mb-3 text-start">
@@ -26,19 +26,16 @@
           >
           <input
             type="email"
-            class="form-control"
+            class="form-control no-border"
             id="inputEmail1"
-            aria-describedby="emailHelp"
           />
-          <div id="emailHelp" class="form-text text-start">
-            We'll never share your email with anyone else.
-          </div>
+
         </div>
         <div class="mb-3 text-start">
           <label for="inputPassword1" class="form-label text-start"
             ><span class="required-input">*</span> Password</label
           >
-          <input type="password" class="form-control" id="inputPassword1" />
+          <input type="password" class="form-control no-border" id="inputPassword1" />
         </div>
         <div class="d-flex title-password-requirements text-start">
           <small class="title-password-requirements text-start"
@@ -53,7 +50,7 @@
           <li>At least one special character (! @ # $ % &)</li>
         </ul>
         <div class="mb-3 form-check text-start">
-          <input type="checkbox" class="form-check-input" id="iheck1" />
+          <input type="checkbox" class="form-check-input no-border" id="iheck1" />
           <label class="form-check-label text-start" for="iheck1"
             >Sign up for email to hear about product launches, exclusive offers
             and athlete news</label
@@ -61,7 +58,7 @@
         </div>
 
         <div class="mb-3 form-check text-start">
-          <input type="checkbox" class="form-check-input" id="iheck1" />
+          <input type="checkbox" class="form-check-input no-border" id="iheck1" />
           <label class="form-check-label text-start" for="iheck1"
             >By checking the box, you are creating an account with New Balance
             and you agree to the
@@ -70,7 +67,7 @@
           >
         </div>
 
-        <button type="submit" class="btn btn-danger btn-lg d-flex flex-start">
+        <button type="submit" class="btn btn-danger btn-lg d-flex flex-start no-border">
           Create Account
         </button>
         <p class="text-start">
@@ -78,7 +75,7 @@
         </p>
       </form>
     </div>
-    <div class="col-6"></div>
+    <div class="col-md-6"></div>
   </div>
 </template>
 
@@ -95,4 +92,9 @@
   list-style-type: square;
   font-size: 10px;
 }
+
+.no-border{
+  border-radius:0px;
+}
+
 </style>

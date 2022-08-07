@@ -1,12 +1,12 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       <div class="row g-0">
-        <div class="col-8">
-          <img src="../../../../public/img/LogoGift.png" alt="" />
+        <div class="col-md-8">
+          <img src="../../../../public/img/LogoGift.png" alt="" class="img-fluid"/>
         </div>
-        <div class="col-4 ps-2 pe-2 pb-4">
+        <div class="col-md-4 ps-2 pe-2 pb-4">
           <h3 class="text-start fw-bold">The Perfect Gift When You</h3>
           <h3 class="text-start fw-bold">Don't Know Their Size</h3>
           <p class="text-start pt-3">
@@ -19,7 +19,7 @@
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active no-border fw-bold"
                 id="pills-egift-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-egift"
@@ -33,7 +33,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link no-border fw-bold"
                 id="pills-physical-gift-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-physical-gift"
@@ -120,7 +120,7 @@
             >
               <form action="">
                 <div class="row g-0">
-                  <div class="col-6">
+                  <div class="col-md-6">
                     <div class="select-amount pt-3 pb-3">
                       <label for="amount">Amount</label>
                       <br />
@@ -132,7 +132,7 @@
                       </select>
                     </div>
                   </div>
-                   <div class="col-6">
+                   <div class="col-md-6">
                     <div class="select-amount pt-3 pb-3">
                       <label for="amount">Qty</label>
                       <br />
@@ -155,7 +155,7 @@
         </div>
       </div>
     </div>
-    <div class="col-2"></div>
+    <div class="col-md-2"></div>
   </div>
 </template>
 
@@ -176,5 +176,9 @@
   height: 40px;
   border: 0px solid #000;
   border-bottom: 1px solid #000;
+}
+
+.no-border{
+  border-radius:0px;
 }
 </style>
