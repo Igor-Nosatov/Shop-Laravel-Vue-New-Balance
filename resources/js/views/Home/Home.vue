@@ -703,25 +703,22 @@
             </button>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+       <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt-2 pb-2">
           <img
             src="../../../../public/img/banneer2.webp"
             alt=""
             class="banner-img"
           />
-
-          <div class="d-flex flex-column justify-content-center">
-            <h3 class="fw-bold p-3">The Fresh Foam X 1080v12</h3>
-            <p class="fw-bold p-3">
-              Style. Comfort. Performance. Worn by SOSUPERSAM.
-            </p>
-          </div>
-          <div class="d-flex flex-row justify-content-center">
-            <button class="btn btn-danger btn-lg m-1 border-none fs-5">
-              Shop women
+          <h3 class="fw-bold p-1">The Fresh Foam X 860v12</h3>
+          <p class="fw-bold ms-5">
+            Pinnacle cushioning and essential stability, for the daily runner.
+          </p>
+          <div class="d-flex flex-row ms-2">
+            <button class="btn btn-danger btn-lg ms-5 border-none fs-5">
+              Shop Men
             </button>
-            <button class="btn btn-danger btn-lg m-1 border-none fs-5">
-              Shop men
+             <button class="btn btn-danger btn-lg ms-5 border-none fs-5">
+              Shop Women
             </button>
           </div>
         </div>
