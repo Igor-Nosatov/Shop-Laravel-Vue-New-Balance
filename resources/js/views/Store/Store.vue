@@ -1,9 +1,9 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       <div class="row g-0">
-        <div class="col-3">
+        <div class="col-md-3">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Men</a></li>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="row g-0">
-        <div class="col-3 p-2">
+        <div class="col-md-3 p-2">
           <div class="category1 pt-4">
             <div
               class="d-flex justify-content-between category-border-bottom pb-2"
@@ -278,17 +278,17 @@
             </div>
           </div>
         </div>
-        <div class="col-9 pt-2 pb-2">
+        <div class="col-md-9 pt-2 pb-2">
           <div class="row g-0">
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -307,9 +307,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -324,15 +322,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -351,9 +349,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -368,15 +364,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -395,9 +391,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -412,15 +406,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -439,9 +433,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -456,15 +448,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -483,9 +475,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -500,15 +490,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-4 pt-1 pb-1">
-              <div class="card" style="width: 18rem">
+            <div class="col-md-4 p-1">
+              <div class="card" style="width: 100%">
                 <a href="" class="relative-icon"
                   ><i class="fa-solid fa-heart fa-2x"></i
                 ></a>
                 <a href="">
                   <img
                     src="../../../../public/img/storeProduct.webp"
-                    class="card-img-top"
+                    class="card-img-top img-fluid no-border"
                     alt="..."
                   />
                 </a>
@@ -527,9 +517,7 @@
 
                   <p
                     class="
-                      card-tgenderCategory
-                      tgenderCategory-start
-                      category-title
+                        text-start
                     "
                   >
                     Men's Running
@@ -546,17 +534,21 @@
             </div>
           </div>
           <div class="row g-0 pt-5 pb-5">
-            <div class="offset-4 col-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 p-1">
               <div class="d-flex flex-column justify-content-center">
                 <p>You have viewed 24 of 499 items</p>
-                <button class="btn btn-danger btn-lg">Load 24 more</button>
+                <button class="btn btn-danger btn-lg no-border fw-bold">
+                  Load 24 more
+                </button>
               </div>
             </div>
+            <div class="col-md-4"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-2"></div>
+    <div class="col-md-2"></div>
   </div>
 </template>
 
@@ -656,5 +648,9 @@
 .checkbox-round-blue:checked {
   background-color: rgb(35, 142, 196);
   border: 1px solid #1d1c1c;
+}
+
+.no-border {
+  border-radius: 0px;
 }
 </style>

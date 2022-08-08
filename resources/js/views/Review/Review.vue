@@ -1,11 +1,12 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="offset-2 col-8">
-      <div class="row g-0 border-bottom">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 p-1">
+      <div class="row g-0">
         <div class="d-flex flex-row justify-content-start">
           <img
             src="../../../../public/img/product1.webp"
-            class="img-review rounded-start"
+            class="img-review  no-border"
             alt="..."
           />
           <div class="pt-4 ps-2">
@@ -15,7 +16,7 @@
         </div>
       </div>
       <div class="row g-0">
-        <div class="col-12 g-0 d-flex flex-column">
+        <div class="col-md-12 g-0 d-flex flex-column">
           <p class="text-start">
             <small class="text-start">
               <span class="required-mark text-start">*</span>Required
@@ -38,20 +39,20 @@
               Review Headline
               <span class="required-mark">*</span></label
             >
-            <input type="text" class="form-control" id="inputHeadline" />
+            <input type="text" class="no-border form-control" id="inputHeadline" />
           </div>
           <div class="mb-3 text-start pt-3">
             <label for="inputNickname" class="form-label text-start">
               Nickname <span class="required-mark">*</span></label
             >
-            <input type="text" class="form-control" id="inputNickname" />
+            <input type="text" class="no-border form-control" id="inputNickname" />
           </div>
           <div class="form-floating">
             <h6 class="text-start">
               Comments <span class="required-mark">*</span>
             </h6>
             <textarea
-              class="form-control"
+              class="no-border form-control"
               placeholder="How you use the product. Things that are great about it. Things that aren't great about it."
               id="floatingTextarea2"
               style="height: 100px"
@@ -61,11 +62,11 @@
           <h5 class="text-start pt-5 fw-bold">Overall Fit</h5>
           <p class="text-start pt-2 pb-2">Select one</p>
 
-          <div class="card card-body flex-row flex-wrap">
+          <div class="card card-body flex-row flex-wrap  no-border">
             <div class="check-btn p-1 flex-fill">
               <input
                 type="checkbox"
-                class="btn-check"
+                class="btn-check no-border"
                 id="btn-check-2"
                 name="1"
                 value="2"
@@ -77,7 +78,7 @@
             <div class="check-btn p-1 flex-fill">
               <input
                 type="checkbox"
-                class="btn-check"
+                class="btn-check no-border"
                 id="btn-check-3"
                 name="1"
                 value="1"
@@ -89,7 +90,7 @@
             <div class="check-btn p-1 flex-fill">
               <input
                 type="checkbox"
-                class="btn-check"
+                class="btn-check no-border"
                 id="btn-check-4"
                 name="1"
                 value="1"
@@ -104,7 +105,7 @@
           <div class="mb-3">
             <input
               type="file"
-              class="form-control"
+              class="no-border form-control"
               aria-label="file example"
               required
             />
@@ -116,17 +117,17 @@
             <label for="inputLocation" class="form-label text-start">
               Location <span class="required-mark">*</span></label
             >
-            <input type="text" class="form-control" id="inputLocation" />
+            <input type="text" class="no-border form-control" id="inputLocation" />
           </div>
 
           <div class="mb-3 text-start pt-3">
             <label for="inputEmail1" class="form-label text-start">
               Email address <span class="required-mark">*</span></label
             >
-            <input type="email" class="form-control" id="inputEmail1" />
+            <input type="email" class="no-border form-control" id="inputEmail1" />
           </div>
           <div class="mb-3 form-check text-start border-bottom">
-            <input type="checkbox" class="form-check-input" id="iheck1" />
+            <input type="checkbox" class="form-check-input no-border" id="iheck1" />
             <label class="form-check-label text-start" for="iheck1"
               >I agree with the terms and privacy policy</label
             >
@@ -140,10 +141,11 @@
               select third party retailers.</small
             >
           </p>
-          <button class="btn btn-danger btn-lg">Submit review</button>
+          <button class="btn btn-danger btn-lg no-border ">Submit review</button>
         </div>
       </div>
     </div>
+     <div class="col-md-2"></div>
   </div>
 </template>
 
@@ -161,5 +163,19 @@
 }
 .btn-danger {
   width: 200px;
+}
+
+.no-border{
+  border-radius:0px;
+}
+
+.btn-category{
+  width:100%;
+   border-radius:0px;
+   font-weight: bold;
+   padding:10px 20px;
+   color:#fff;
+   background-color: #000;
+   border:1px solid #000;
 }
 </style>

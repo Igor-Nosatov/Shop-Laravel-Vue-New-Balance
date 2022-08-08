@@ -1,10 +1,10 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       <div class="row g-0">
-        <div class="col-3">
-          <nav aria-label="breadcrumb">
+        <div class="col-md-3  ps-2">
+          <nav aria-label="breadcrum">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Men</a></li>
               <li class="breadcrumb-item"><a href="#">Shoes</a></li>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="row g-0">
-        <div class="col-7 p-1">
+        <div class="col-md-7 p-1">
           <div class="d-flex flex-row flex-wrap">
             <img
               src="../../../../public/img/product1.webp"
@@ -50,7 +50,7 @@
             />
           </div>
         </div>
-        <div class="col-5 p-1">
+        <div class="col-md-5 p-1">
           <div class="product-card d-flex flex-column">
             <p class="text-start product-category">Unisex</p>
             <h2 class="text-start product-title fw-bold">574 Legacy</h2>
@@ -195,7 +195,7 @@
           </div>
         </div>
 
-        <div class="col-12 pb-4 pt-4">
+        <div class="col-md-12 pb-4 pt-4  d-none d-sm-none d-md-none d-lg-block">
           <h3 class="text-start text-dark">You May Also Like</h3>
           <div
             id="carouselExampleControls"
@@ -205,7 +205,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row g-0">
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -222,7 +222,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -239,7 +239,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -256,7 +256,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -277,7 +277,7 @@
               </div>
               <div class="carousel-item">
                 <div class="row g-0">
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -294,7 +294,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -311,7 +311,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -328,7 +328,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -374,7 +374,7 @@
             </button>
           </div>
         </div>
-        <div class="col-12 pb-4 pt-4">
+        <div class="col-md-12 pb-4 pt-4  d-none d-sm-none d-md-none d-lg-block">
           <h3 class="text-start text-dark">Recently Viewed</h3>
           <div
             id="carouselExampleControls"
@@ -384,7 +384,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row g-0">
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -401,7 +401,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -418,7 +418,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -435,7 +435,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -456,7 +456,7 @@
               </div>
               <div class="carousel-item">
                 <div class="row g-0">
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -473,7 +473,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -490,7 +490,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -507,7 +507,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-md-3">
                     <div class="card" style="width: 18rem">
                       <img
                         src="../../../../public/img/m990gl5_nb_02_i.webp"
@@ -553,7 +553,7 @@
             </button>
           </div>
         </div>
-        <div class="col-12 pb-4 pt-4">
+        <div class="col-md-12 pb-4 pt-4 ps-2">
           <h3 class="text-start fw-bold">Customer Reviews</h3>
           <div class="d-flex flex-row justify-content-start">
             <i class="fa-solid fa-star"></i>
@@ -569,12 +569,12 @@
             </button>
           </div>
         </div>
-        <div class="col-12 count-block-reviews">
+        <div class="col-md-12 count-block-reviews">
           <p class="text-start fw-bold pt-3 ps-3">Reviewed by 3 customers</p>
         </div>
-        <div class="col-12">
+        <div class="col-md-12">
           <div class="row g-0 border-bottom border-dark pt-5 pb-5">
-            <div class="col-9 p-1">
+            <div class="col-md-9 p-1">
               <div class="d-flex flex-row justify-content-start">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -595,7 +595,7 @@
                 <i class="fa-solid fa-thumbs-up"></i>
               </p>
             </div>
-            <div class="col-3 p-1">
+            <div class="col-md-3 p-1">
               <p class="text-start">
                 <span class="fw-bold"> Submitted</span> 2 days ago
               </p>
@@ -606,7 +606,7 @@
             </div>
           </div>
           <div class="row g-0 border-bottom border-dark pt-5 pb-5">
-            <div class="col-9 p-1">
+            <div class="col-md-9 p-1">
               <div class="d-flex flex-row justify-content-start">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -627,7 +627,7 @@
                 <i class="fa-solid fa-thumbs-up"></i>
               </p>
             </div>
-            <div class="col-3 p-1">
+            <div class="col-md-3 p-1">
               <p class="text-start">
                 <span class="fw-bold"> Submitted</span> 2 days ago
               </p>
@@ -638,7 +638,7 @@
             </div>
           </div>
           <div class="row g-0 border-bottom border-dark pt-5 pb-5">
-            <div class="col-9 p-1">
+            <div class="col-md-9 p-1">
               <div class="d-flex flex-row justify-content-start">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -659,7 +659,7 @@
                 <i class="fa-solid fa-thumbs-up"></i>
               </p>
             </div>
-            <div class="col-3 p-1">
+            <div class="col-md-3 p-1">
               <p class="text-start">
                 <span class="fw-bold"> Submitted</span> 2 days ago
               </p>
@@ -670,12 +670,12 @@
             </div>
           </div>
         </div>
-        <div class="col-12 p-1 text-start pt-3">
+        <div class="col-md-12 p-1 text-start pt-3">
           <a href="" class="text-dark text-start fw-bold">Back to top</a>
         </div>
       </div>
     </div>
-    <div class="col-2"></div>
+    <div class="col-md-2"></div>
   </div>
 </template>
 
@@ -709,4 +709,9 @@
   font-size: 12px;
   text-align: start;
 }
+
+.border-none {
+  border-radius: 0px !important;
+}
+
 </style>

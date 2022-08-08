@@ -1,9 +1,9 @@
 <template>
   <div class="row g-0 pt-5 pb-5">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
       <div class="row g-0">
-        <div class="col-7">
+        <div class="col-md-7">
           <p class="fw-bold text-start text-dark">
             <a href="" class="text-dark">Back to shopping cart</a>
           </p>
@@ -14,7 +14,7 @@
           </div>
           <form class="pt-4 pb-4 text-start">
             <div class="row g-0">
-              <div class="col-6 p-1">
+              <div class="col-md-6 p-1">
                 <div class="mb-3 text-start">
                   <input
                     type="text"
@@ -24,7 +24,7 @@
                 </div>
               </div>
 
-              <div class="col-6 p-1">
+              <div class="col-md-6 p-1">
                 <div class="mb-3 text-start">
                   <input
                     type="text"
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="row g-0">
-              <div class="col-6 p-1">
+              <div class="col-md-6 p-1">
                 <div class="mb-3 text-start">
                   <input
                     type="text"
@@ -45,7 +45,7 @@
                 </div>
               </div>
 
-              <div class="col-6 p-1">
+              <div class="col-md-6 p-1">
                 <div class="mb-3 text-start">
                   <input
                     type="text"
@@ -56,14 +56,14 @@
               </div>
             </div>
             <div class="row g-0">
-              <div class="col-4 p-1">
+              <div class="col-md-4 p-1">
                 <input
                   type="text"
                   class="form-control form-control-checkout"
                   placeholder="City"
                 />
               </div>
-              <div class="col-4 p-1">
+              <div class="col-md-4 p-1">
                 <select class="form-select form-control-checkout">
                   <option selected>Choose state</option>
                   <option value="1">Alaska</option>
@@ -71,7 +71,7 @@
                   <option value="3">Hawai</option>
                 </select>
               </div>
-              <div class="col-4 p-1">
+              <div class="col-md-4 p-1">
                 <input
                   type="text"
                   class="form-control form-control-checkout"
@@ -81,7 +81,7 @@
             </div>
 
             <div class="row g-0">
-              <div class="col-6 p-1">
+              <div class="col-md-6 p-1">
                 <p class="text-start pt-2 ps-1">
                   <small> Required for shipping related questions</small>
                 </p>
@@ -93,11 +93,11 @@
                 <div class="mb-3 form-check text-start pt-4">
                   <input
                     type="checkbox"
-                    class="form-check-input"
+                    class="form-check-input no-border"
                     id="address-account"
                   />
                   <label
-                    class="form-check-label text-start"
+                    class="form-check-label text-start "
                     for="address-account"
                     >Save address to my account</label
                   >
@@ -111,10 +111,10 @@
                 </div>
               </div>
             </div>
-            <div class="mb-3 form-check text-start pt-4">
+            <div class="mb-3 form-check text-start pt-4  ms-1">
               <input
                 type="checkbox"
-                class="form-check-input"
+                class="form-check-input no-border"
                 id="exclusive-offers"
               />
               <label class="form-check-label text-start" for="exclusive-offers"
@@ -123,7 +123,7 @@
               >
             </div>
             <div class="row g-0 pt-4">
-              <div class="col-12">
+              <div class="col-md-12  ms-1">
                 <h6 class="text-start fw-bold">Shipping Options</h6>
                 <div class="form-check">
                   <input
@@ -141,15 +141,15 @@
             </div>
             <button
               type="submit"
-              class="btn btn-danger payment-btn fw-bold mt-5"
+              class="btn btn-danger payment-btn fw-bold mt-5 ms-1"
             >
               Continue to payment
             </button>
           </form>
         </div>
-        <div class="col-5 ps-2 pe-2">
+        <div class="col-md-5 ps-2 pe-2">
           <div class="row g-0">
-            <div class="col-12">
+            <div class="col-md-12">
               <div class="highlight-summary">
                 <h6 class="fw-bold text-start ps-2 pt-2">Order Summary</h6>
               </div>
@@ -174,7 +174,7 @@
             </div>
           </div>
           <div class="row g-0">
-            <div class="col-12">
+            <div class="col-md-12">
               <div class="highlight-shipping">
                 <h6 class="fw-bold text-start ps-2 pt-2">
                   Shipping (2) <small>- 2-7 business days once shipped</small>
@@ -182,22 +182,22 @@
               </div>
               <div class="shipping-desc">
                 <div class="row g-0 product-cart pt-2 pb-2">
-                  <div class="col-5 d-flex justify-content-start  p-2">
+                  <div class="col-md-5 d-flex justify-content-start  p-2">
                     <img
                       src="../../../../public/img/cartProduct1.webp"
                       alt=""
                       class="cart-product-image"
                     />
                   </div>
-                  <div class="col-7 text-start  p-2">
+                  <div class="col-md-7 text-start  p-2">
                     <div class="row g-0">
-                      <div class="col-7">
+                      <div class="col-md-7">
                         <h6 class="cart-product-title text-start fw-bold p-1">
                           NB Numeric Jamie Foy 306 Laceless
                         </h6>
                         <small class="p-1">Unisex</small>
                       </div>
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <p class="cart-product-price text-end fw-bold p-1">
                           $79.99
                         </p>
@@ -218,22 +218,22 @@
                   </div>
                 </div>
                 <div class="row g-0 product-cart  pt-2 pb-2">
-                  <div class="col-5 d-flex justify-content-start p-2">
+                  <div class="col-md-5 d-flex justify-content-start p-2">
                     <img
                       src="../../../../public/img/cartProduct2.webp"
                       alt=""
                       class="cart-product-image"
                     />
                   </div>
-                  <div class="col-7 text-start  p-2">
+                  <div class="col-md-7 text-start  p-2">
                     <div class="row g-0">
-                      <div class="col-7">
+                      <div class="col-md-7">
                         <h6 class="cart-product-title text-start fw-bold p-1">
                           NB Numeric Jamie Foy 306 Laceless
                         </h6>
                         <small class="p-1">Unisex</small>
                       </div>
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <p class="cart-product-price text-end fw-bold p-1">
                           $79.99
                         </p>
@@ -259,7 +259,7 @@
         </div>
       </div>
     </div>
-    <div class="col-2"></div>
+    <div class="col-md-2"></div>
   </div>
 </template>
 
@@ -301,5 +301,9 @@
 
 .cart-product-image {
   height: 200px;
+}
+
+.no-border{
+  border-radius:0px;
 }
 </style>
