@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name', 300);
+            $table->string('last_name', 300);
+            $table->string('street', 300);
+            $table->string('state', 300);
+            $table->string('zip_code', 300);
+            $table->string('phone', 300)->unique();
+            $table->string('email', 300)->unique();
             $table->timestamps();
         });
     }
