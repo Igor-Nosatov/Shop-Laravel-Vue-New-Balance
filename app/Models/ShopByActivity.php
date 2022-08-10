@@ -5,32 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class ShopByActivity extends Model
 {
     use HasFactory;
-
+    
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array<string>
      */
     protected $fillable = [
-        'quantity',
-        'promo_code',
-        'shipped_days',
-        'product_id'
+        'name'
     ];
 
     /**
      * The attributes that should be cast.
      *
-     * @var array
+     * @var array<string>
      */
     protected $casts = [
-        'quantity' => 'integer',
-        'promo_code' => 'integer',
-        'shipped_days' => 'string',
-        'product_id' => 'integer',
+        'name' => 'string',
     ];
     public function products()
     {

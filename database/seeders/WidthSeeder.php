@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProductWidthSeeder extends Seeder
+class WidthSeeder extends Seeder
 {
     /**
      * Run the database seeds.
