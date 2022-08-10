@@ -31,6 +31,7 @@ return new class extends Migration
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
+            $table->foreignId('review_id')->constrained()->nullable();
             $table->timestamps();
         });
     }
