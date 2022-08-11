@@ -24,6 +24,14 @@ return new class extends Migration
             $table->string('location', 300);
             $table->string('email', 300)->unique();
             $table->boolean('policy_agree')->default(0);
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+                $table->foreignId('product_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

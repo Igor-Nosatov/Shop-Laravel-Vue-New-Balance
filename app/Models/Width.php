@@ -26,5 +26,10 @@ class Width extends Model
     protected $casts = [
         'name' => 'string',
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
     
 }

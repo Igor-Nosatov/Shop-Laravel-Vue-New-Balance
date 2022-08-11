@@ -31,9 +31,20 @@ class Cart extends Model
         'promo_code' => 'integer',
         'shipped_days' => 'string',
         'product_id' => 'integer',
+        'user_id' => 'integer',
     ];
-    public function products()
+    
+    public function product()
     {
         return $this->hasMany(Product::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function checkout()
+    {
+        return $this->belongsTo(Checkout::class);
     }
 }

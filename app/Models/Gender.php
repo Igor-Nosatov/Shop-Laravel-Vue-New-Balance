@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Gender extends Model
 {
     use HasFactory;
-
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -26,4 +26,8 @@ class Gender extends Model
     protected $casts = [
         'name' => 'string',
     ];
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

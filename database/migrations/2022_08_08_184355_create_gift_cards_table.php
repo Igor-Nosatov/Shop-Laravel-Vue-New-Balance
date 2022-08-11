@@ -21,6 +21,10 @@ return new class extends Migration
             $table->string('recipient_email', 300);
             $table->text('message')->nullable();
             $table->integer('amount');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

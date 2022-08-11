@@ -20,18 +20,16 @@ return new class extends Migration
             $table->integer('weight')->nullable();
             $table->string('style_code', 200)->nullable();
             $table->integer('price');
-            $table->foreignId('product_feature_id')->constrained()->nullable();
-            $table->foreignId('product_width_id')->constrained()->nullable();
+            $table->foreignId('feature_id')->constrained()->nullable();
             $table->foreignId('footwear_size_id')->constrained()->nullable();
             $table->foreignId('clothing_size_id')->constrained()->nullable();
             $table->foreignId('gender_neutral_size_id')->constrained()->nullable();
-            $table->foreignId('product_fit_id')->constrained()->nullable();
-            $table->foreignId('product_model_id')->constrained()->nullable();
-            $table->foreignId('product_width_id')->constrained()->nullable();
+            $table->foreignId('fit_id')->constrained()->nullable();
+            $table->foreignId('style_id')->constrained()->nullable();
+            $table->foreignId('width_id')->constrained()->nullable();
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
-            $table->foreignId('review_id')->constrained()->nullable();
             $table->timestamps();
         });
     }
