@@ -4,10 +4,14 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ *
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -42,16 +46,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function giftCards()
+    /**
+     * @return HasMany
+     */
+    public function giftCards(): HasMany
     {
         return $this->hasMany( GiftCard::class);
     }
-    public function carts()
+
+    /**
+     * @return HasMany
+     */
+    public function carts(): HasMany
     {
         return $this->hasMany(Cart::class);
     }
 
-    public function checkout()
+    /**
+     * @return HasMany
+     */
+    public function checkout(): HasMany
     {
         return $this->hasMany(Checkout::class);
     }

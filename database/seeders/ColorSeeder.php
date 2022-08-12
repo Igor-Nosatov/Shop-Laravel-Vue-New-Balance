@@ -12,8 +12,24 @@ class ColorSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        //
+        DB::table('colors')->insert(
+            [
+                ['name' => 'Black'],
+                ['name' => 'Green'],
+                ['name' => 'White'],
+                ['name' => 'Red'],
+                ['name' => 'Blue'],
+                ['name' => 'Brown'],
+                ['name' => 'Gray'],
+                ['name' => 'Yellow'],
+                ['name' => 'Orange'],
+                ['name' => 'Purple'],
+                ['name' => 'Pink'],
+                ['name' => 'Tan'],
+            ]
+        );
     }
 }
+

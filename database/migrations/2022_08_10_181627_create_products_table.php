@@ -11,7 +11,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
@@ -20,16 +20,13 @@ return new class extends Migration
             $table->integer('weight')->nullable();
             $table->string('style_code', 200)->nullable();
             $table->integer('price');
+            $table->string('style', 200);
             $table->foreignId('feature_id')->constrained()->nullable();
             $table->foreignId('footwear_size_id')->constrained()->nullable();
-            $table->foreignId('clothing_size_id')->constrained()->nullable();
-            $table->foreignId('gender_neutral_size_id')->constrained()->nullable();
             $table->foreignId('fit_id')->constrained()->nullable();
-            $table->foreignId('style_id')->constrained()->nullable();
             $table->foreignId('width_id')->constrained()->nullable();
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('category_id')->constrained();
-            $table->foreignId('sub_category_id')->constrained();
             $table->timestamps();
         });
     }
@@ -39,7 +36,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('products');
     }

@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Relations\HasMany;
+/**
+ *
+ */
 class Width extends Model
 {
     use HasFactory;
@@ -27,7 +30,10 @@ class Width extends Model
         'name' => 'string',
     ];
 
-    public function products()
+    /**
+     * @return HasMany
+     */
+    public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }

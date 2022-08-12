@@ -4,7 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ *
+ */
 class Favourite extends Model
 {
     use HasFactory;
@@ -27,7 +31,11 @@ class Favourite extends Model
         'user_id'=> 'integer',
         'product_id'=> 'integer',
     ];
-    public function product()
+
+    /**
+     * @return HasMany
+     */
+    public function product(): HasMany
     {
         return $this->hasMany(Product::class); 
     }

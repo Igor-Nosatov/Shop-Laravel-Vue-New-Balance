@@ -4,7 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ *
+ */
 class Checkout extends Model
 {
     use HasFactory;
@@ -40,7 +44,10 @@ class Checkout extends Model
         'cart_id' => 'integer',
     ];
 
-    public function carts()
+    /**
+     * @return HasMany
+     */
+    public function carts():HasMany
     {
         return $this->hasMany(cart::class);
     }

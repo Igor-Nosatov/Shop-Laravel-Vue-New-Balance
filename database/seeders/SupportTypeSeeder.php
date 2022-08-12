@@ -5,20 +5,20 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class GenderSeeder extends Seeder
+class SupportTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run(): void
+    public function run()
     {
-        DB::table('genders')->insert(
+        DB::table('support_types')->insert(
             [
-                ['name' => 'Men'],
-                ['name' => 'Women'],
-                ['name' => 'Kids'],
+                ['name' => 'Neutral Cushioning'],
+                ['name' => 'Stability'],
+                ['name' => 'Motion Control'],
             ]
         );
     }

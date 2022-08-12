@@ -4,7 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+/**
+ *
+ */
 class Cart extends Model
 {
     use HasFactory;
@@ -33,17 +37,27 @@ class Cart extends Model
         'product_id' => 'integer',
         'user_id' => 'integer',
     ];
-    
-    public function product()
+
+    /**
+     * @return HasMany
+     */
+    public function product():HasMany
     {
         return $this->hasMany(Product::class);
     }
-    public function user()
+
+    /**
+     * @return BelongsTo
+     */
+    public function user():BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function checkout()
+    /**
+     * @return BelongsTo
+     */
+    public function checkout():BelongsTo
     {
         return $this->belongsTo(Checkout::class);
     }

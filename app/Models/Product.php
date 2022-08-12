@@ -4,7 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+/**
+ *
+ */
 class Product extends Model
 {
     use HasFactory;
@@ -22,14 +27,12 @@ class Product extends Model
         'feature_id',
         'width_id',
         'footwear_size_id',
-        'clothing_size_id',
-        'gender_neutral_size_id',
         'fit_id',
         'model_id',
         'width_id',
         'gender_id',
         'category_id',
-        'sub_category_id',
+        'model_number_id',
     ];
 
     /**
@@ -46,61 +49,91 @@ class Product extends Model
         'feature_id'=> 'integer',
         'width_id'=> 'integer',
         'footwear_size_id'=> 'integer',
-        'clothing_size_id'=> 'integer',
-        'gender_neutral_size_id'=> 'integer',
         'fit_id' => 'integer',
         'style_id' => 'integer',
         'gender_id' => 'integer',
         'category_id' => 'integer',
-        'sub_category_id' => 'integer',
+        'model_number_id' => 'integer',
     ];
-    public function features()
+
+    /**
+     * @return BelongsToMany
+     */
+    public function features(): BelongsToMany
     {
         return $this->belongsToMany(Feature::class);
     }
 
-    public function reviews()
+    /**
+     * @return HasMany
+     */
+    public function reviews(): HasMany
     {
         return $this->hasMany(Review::class);
     }
+
+    /**
+     * @return BelongsTo
+     */
     public function width()
     {
         return $this->belongsTo(Width::class);
     }
-    public function footwearSize()
+
+    /**
+     * @return BelongsTo
+     */
+    public function footwearSize(): BelongsTo
     {
         return $this->belongsTo(FootwearSize::class);
     }
 
-    public function clothingSize()
-    {
-        return $this->belongsTo(ClothingSize::class);
-    }
-
-    public function genderNeutralSize()
-    {
-        return $this->belongsTo(GenderNeutralSize::class);
-    }
-
-    public function fit()
+    /**
+     * @return BelongsTo
+     */
+    public function fit(): BelongsTo
     {
         return $this->belongsTo(Fit::class);
     }
-    public function style()
+
+    /**
+     * @return BelongsTo
+     */
+    public function style(): BelongsTo
     {
         return $this->belongsTo(Style::class);
     }
-    public function gender()
+
+    /**
+     * @return BelongsTo
+     */
+    public function gender(): BelongsTo
     {
         return $this->belongsTo(Gender::class);
     }
-    public function category()
+
+    /**
+     * @return BelongsTo
+     */
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
-    public function subCategory()
+
+    /**
+     * @return BelongsTo
+     */
+    public function modelNumber(): BelongsTo
     {
-        return $this->belongsTo(SubCategory::class);
+        return $this->belongsTo(ModelNumber::class);
+    }
+
+    /**
+     * @return BelongsTo
+     */
+    public function supportType(): BelongsTo
+    {
+        return $this->belongsTo(SupportType::class);
     }
 }
 

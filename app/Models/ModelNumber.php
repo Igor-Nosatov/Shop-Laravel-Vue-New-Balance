@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Models\ProductSize;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class FootwearSize extends Model
+class ModelNumber extends Model
 {
     use HasFactory;
-    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,7 +27,11 @@ class FootwearSize extends Model
     protected $casts = [
         'name' => 'string',
     ];
-    public function products()
+
+    /**
+     * @return HasMany
+     */
+    public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }
