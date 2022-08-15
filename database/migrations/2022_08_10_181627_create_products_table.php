@@ -20,8 +20,6 @@ return new class extends Migration
             $table->integer('weight')->nullable();
             $table->string('style_code', 200)->nullable();
             $table->integer('price');
-            $table->string('style', 200);
-            $table->foreignId('feature_id')->constrained()->nullable();
             $table->foreignId('footwear_size_id')->constrained()->nullable();
             $table->foreignId('fit_id')->constrained()->nullable();
             $table->foreignId('width_id')->constrained()->nullable();
