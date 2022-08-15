@@ -21,18 +21,11 @@ class Product extends Model
     protected $fillable = [
         'title', 
         'description',
-        'weight',
         'style_code',
         'price',
-        'feature_id',
-        'width_id',
-        'footwear_size_id',
-        'fit_id',
-        'model_id',
-        'width_id',
         'gender_id',
         'category_id',
-        'model_number_id',
+        'support_type_id'
     ];
 
     /**
@@ -43,17 +36,11 @@ class Product extends Model
     protected $casts = [
         'title'=> 'string',
         'description'=> 'string',
-        'weight'=> 'string',
         'style_code'=> 'string',
-        'price'=> 'integer',
-        'feature_id'=> 'integer',
-        'width_id'=> 'integer',
-        'footwear_size_id'=> 'integer',
-        'fit_id' => 'integer',
-        'style_id' => 'integer',
+        'price' => 'integer',
         'gender_id' => 'integer',
         'category_id' => 'integer',
-        'model_number_id' => 'integer',
+        'support_type_id' => 'integer',
     ];
 
     /**
@@ -79,37 +66,20 @@ class Product extends Model
     {
         return $this->hasMany(Image::class);
     }
-
     /**
-     * @return BelongsTo
+     * @return BelongsToMany
      */
-    public function width()
+    public function width(): BelongsToMany
     {
-        return $this->belongsTo(Width::class);
+        return $this->belongsToMany(Width::class);
     }
 
     /**
-     * @return BelongsTo
+     * @return BelongsToMany
      */
-    public function footwearSize(): BelongsTo
+    public function footwearSizes(): BelongsToMany
     {
-        return $this->belongsTo(FootwearSize::class);
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function fit(): BelongsTo
-    {
-        return $this->belongsTo(Fit::class);
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function style(): BelongsTo
-    {
-        return $this->belongsTo(Style::class);
+        return $this->belongsToMany(FootwearSize::class);
     }
 
     /**
@@ -129,11 +99,11 @@ class Product extends Model
     }
 
     /**
-     * @return BelongsTo
+     * @return HasMany
      */
-    public function modelNumber(): BelongsTo
+    public function modelNumber(): HasMany
     {
-        return $this->belongsTo(ModelNumber::class);
+        return $this->hasMany(ModelNumber::class);
     }
 
     /**

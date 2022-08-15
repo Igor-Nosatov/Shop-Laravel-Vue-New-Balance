@@ -17,14 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('title', 200);
             $table->text('description');
-            $table->integer('weight')->nullable();
             $table->string('style_code', 200)->nullable();
             $table->integer('price');
-            $table->foreignId('footwear_size_id')->constrained()->nullable();
-            $table->foreignId('fit_id')->constrained()->nullable();
-            $table->foreignId('width_id')->constrained()->nullable();
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('category_id')->constrained();
+            $table->foreignId('support_type_id')->constrained();
             $table->timestamps();
         });
     }

@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('footwear_size_product', function (Blueprint $table) {
             $table->id();
-            $table->string('path', 255);
-            $table->foreignId('product_id')->constrained()->nullable();
+            $table->integer('footwear_size_id')->unsigned();
+            $table->integer('product_id')->unsigned();
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('footwear_size_product');
     }
 };

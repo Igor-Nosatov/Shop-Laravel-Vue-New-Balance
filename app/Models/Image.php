@@ -16,7 +16,7 @@ class Image extends Model
      * @var array<string>
      */
     protected $fillable = [
-        'name',
+        'path',
         'product_id'
     ];
 
@@ -26,7 +26,7 @@ class Image extends Model
      * @var array<string>
      */
     protected $casts = [
-        'name' => 'string',
+        'path' => 'string',
         'product_id' => 'integer'
     ];
 

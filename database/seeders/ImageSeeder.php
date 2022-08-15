@@ -14,13 +14,6 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('images')->insert(
-            [
-                [
-                    'name' => '',
-                    'product_id' => ''
-                ],
-            ]
-        );
+        Image::factory()->count(250000)->create();
     }
 }
