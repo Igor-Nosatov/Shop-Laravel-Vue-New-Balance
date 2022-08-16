@@ -19,9 +19,9 @@ return new class extends Migration
             $table->text('description');
             $table->string('style_code', 200)->nullable();
             $table->integer('price');
-            $table->foreignId('gender_id')->constrained();
-            $table->foreignId('category_id')->constrained();
-            $table->foreignId('support_type_id')->constrained();
+            $table->foreignId('gender_id')->nullable()->constrained();
+            $table->foreignId('category_id')->nullable()->constrained();
+            $table->foreignId('support_type_id')->nullable()->constrained()->default(1);
             $table->timestamps();
         });
     }

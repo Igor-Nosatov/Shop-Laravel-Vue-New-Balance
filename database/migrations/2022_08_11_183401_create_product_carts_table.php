@@ -19,13 +19,9 @@ return new class extends Migration
             $table->integer('promo_code')->nullable();
             $table->string('shipped_days', 100);
             $table->foreignId('user_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+                ->constrained();
             $table->foreignId('product_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+                ->constrained();
             $table->timestamps();
         });
     }

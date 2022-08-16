@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Image extends Model
 {
@@ -17,7 +18,6 @@ class Image extends Model
      */
     protected $fillable = [
         'path',
-        'product_id'
     ];
 
     /**
@@ -27,12 +27,12 @@ class Image extends Model
      */
     protected $casts = [
         'path' => 'string',
-        'product_id' => 'integer'
     ];
 
-    public function product(): BelongsTo
+
+    public function products(): BelongsToMany
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsToMany(Product::class);
     }
 
 }

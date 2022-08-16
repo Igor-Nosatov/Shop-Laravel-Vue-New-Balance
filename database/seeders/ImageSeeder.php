@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Image;
 class ImageSeeder extends Seeder
 {
     /**
@@ -14,6 +15,13 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        Image::factory()->count(250000)->create();
+        DB::table('images')->insert(
+            [
+                ['path' => 'image1'],
+                ['path' => 'image2'],
+                ['path' => 'image3'],
+                ['path' => 'image4'],
+            ]
+        );
     }
 }

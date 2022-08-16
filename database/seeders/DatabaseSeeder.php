@@ -23,7 +23,14 @@ class DatabaseSeeder extends Seeder
         $this->call(ModelNumberSeeder::class);
         $this->call(GenderSeeder::class);
         $this->call(ProductSeeder::class);
-        $this->call(ReviewSeeder::class);
+        $this->call(ColorProductSeeder::class);
+        $this->call(FeatureProductSeeder::class);
+        $this->call(FootwearSizeProductSeeder::class);
+        $this->call(ModelNumberProductSeeder::class);
+        $this->call(WidthProductSeeder::class);
         $this->call(ImageSeeder::class);
+        $this->call(ImageProductSeeder::class);
+        $this->call(ReviewSeeder::class);
+       
     }
 }
