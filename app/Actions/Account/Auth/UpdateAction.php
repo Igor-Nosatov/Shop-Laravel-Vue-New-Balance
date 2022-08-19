@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace App\Actions\Account\Auth;
 
 use App\Repositories\Account\Auth\AuthRepositoryInterface;
-use App\Http\Requests\LoginRequest;
-final class LoginAction
+use App\Http\Requests\UpdateUserRequest;
+
+final class UpdateAction
 {
     private $authRepository;
 
@@ -15,8 +16,8 @@ final class LoginAction
         $this->authRepository = $authRepository;
     }
 
-    public function execute(LoginRequest $request)
+    public function execute(UpdateUserRequest $request)
     {
-        return $this->authRepository->loginUser($request);
+        return $this->authRepository->updateUser($request);
     }
 }

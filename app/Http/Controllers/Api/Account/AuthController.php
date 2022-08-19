@@ -1,85 +1,67 @@
 <?php
 
-namespace App\Http\Controllers\Api\Account;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-
+use App\Actions\Account\Auth\LoginAction;
+use App\Actions\Account\Auth\LogoutAction;
+use App\Actions\Account\Auth\RegisterAction;
+use App\Actions\Account\Auth\ShowUserAction;
+use App\Actions\Account\Auth\UpdateAction;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\UpdateUserRequest;
+use Illuminate\Http\JsonResponse;
+use App\Models\AccountModels\User;
 class AuthController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    private $registerUser;
+    private $loginUser;
+    private $logoutUser;
+    private $showUser;
+    private $updateUser;
+
+    public function __construct(
+        RegisterAction $registerUser,
+        LoginAction $loginUser,
+        LogoutAction $logoutUser,
+        ShowUserAction $showUser,
+        UpdateAction  $updateUser
+    ) {
+        $this->registerUser = $registerUser;
+        $this->loginUser    =  $loginUser;
+        $this->logoutUser   =  $logoutUser;
+        $this->showUser     =  $showUser;
+        $this->updateUser = $updateUser;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function register(RegisterRequest $request)
     {
-        //
+        $user = $this->registerUser->execute($request);
+        $token = $user->createToken('shop-token')->plainTextToken;
+        $response = ['user' => $user, 'token' => $token];
+        return response($response, JsonResponse::HTTP_CREATED);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function login(LoginRequest $request)
     {
-        //
+        return $this->loginUser->execute($request);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function me()
     {
-        //
+        $response = $this->showUser->execute();
+        return response($response, JsonResponse::HTTP_OK);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function update(UpdateUserRequest $request)
     {
-        //
+        $response = $this->updateUser->execute($request);
+        return response($response, JsonResponse::HTTP_OK);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function logout(User $user)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $this->logoutUser->execute($user);
+        return response(null, JsonResponse::HTTP_NO_CONTENT);
     }
 }
