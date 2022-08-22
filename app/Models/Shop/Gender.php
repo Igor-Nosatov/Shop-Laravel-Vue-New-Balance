@@ -1,12 +1,16 @@
 <?php
 
-namespace App\Models\ShopModels;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use \Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Category extends Model
+/**
+ *
+ */
+class Gender extends Model
 {
     use HasFactory;
     
@@ -28,9 +32,11 @@ class Category extends Model
         'name' => 'string',
     ];
 
-    public function products(): HasMany
+    /**
+     * @return BelongsToMany
+     */
+    public function products(): BelongsToMany
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsToMany(Product::class);
     }
-
 }

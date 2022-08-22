@@ -5,5 +5,6 @@ use Illuminate\Http\Request;
 
 interface GiftCardRepositoryInterface
 {
+    public function createGiftCard();
 
 }

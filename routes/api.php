@@ -15,18 +15,19 @@ use App\Http\Controllers\Api\Shop\CompanyController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::apiResource('/', HomeController::class);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('cart', CartController::class);
+    Route::apiResource('checkout', CheckoutController::class);
+    Route::apiResource('gift-card', GiftCardController::class);
+    Route::apiResource('store', StoreController::class);
+    Route::apiResource('review', ReviewController::class);
+    Route::apiResource('product', ProductController::class);
+    Route::apiResource('auth', AuthController::class);
+    Route::apiResource('account', AccountController::class);
 });
 
-Route::apiResource('companies', CompanyController::class);
 
-Route::apiResource('cart', CartController::class);
-Route::apiResource('/', HomeController::class);
-Route::apiResource('cart', CheckoutController::class);
-Route::apiResource('gift-card', GiftCardController::class);
-Route::apiResource('store', StoreController::class);
-Route::apiResource('review', ReviewController::class);
-Route::apiResource('product', ProductController::class);
-Route::apiResource('auth', AuthController::class);
-Route::apiResource('account', AccountController::class);
+

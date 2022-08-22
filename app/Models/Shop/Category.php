@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Models\ShopModels;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class SupportType extends Model
+class Category extends Model
 {
     use HasFactory;
-
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -28,11 +28,9 @@ class SupportType extends Model
         'name' => 'string',
     ];
 
-    /**
-     * @return HasMany
-     */
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }
+
 }

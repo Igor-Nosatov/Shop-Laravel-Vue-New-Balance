@@ -5,5 +5,5 @@ use Illuminate\Http\Request;
 
 interface StoreRepositoryInterface
 {
-
+    public function getProductData();
 }

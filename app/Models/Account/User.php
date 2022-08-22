@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\AccountModels;
+namespace App\Models\Account;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,10 +8,25 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- *
+ * User Model
+ * @package App\Models\Account;
+ * 
+ * @property int id
+ * @property string name
+ * @property string birthdate
+ * @property int $role_id A foreign key to an role
+ * @property string phone_number
+ * @property string email
+ * @property string password
+ * 
+ * @property-read User $user
+ * 
+ * @property-read string $full_name
  */
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -43,6 +58,9 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'name' => 'string',
+        'email' => 'string',
+        'password' => 'string',
         'email_verified_at' => 'datetime',
     ];
 
@@ -69,4 +87,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Checkout::class);
     }
+
+    /**
+     * @return BelongsTo
+     */
+    public function role(): BelongsTo
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
 }

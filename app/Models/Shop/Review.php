@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\ShopModels;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -49,7 +49,6 @@ class Review extends Model
         'user_id' => 'integer',
         'product_id' => 'integer',
     ];
-
 
     /**
      * @return BelongsTo

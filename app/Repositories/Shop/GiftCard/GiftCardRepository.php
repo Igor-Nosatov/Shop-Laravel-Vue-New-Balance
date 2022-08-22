@@ -7,5 +7,8 @@ use App\Repositories\Shop\GiftCard\GiftCardRepositoryInterface;
 
 class GiftCardRepository implements GiftCardRepositoryInterface
 {
+    public function createGiftCard()
+    {
 
+    }
 }

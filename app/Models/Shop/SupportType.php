@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Models\ShopModels;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Image extends Model
+class SupportType extends Model
 {
     use HasFactory;
 
@@ -17,7 +16,7 @@ class Image extends Model
      * @var array<string>
      */
     protected $fillable = [
-        'path',
+        'name'
     ];
 
     /**
@@ -26,13 +25,14 @@ class Image extends Model
      * @var array<string>
      */
     protected $casts = [
-        'path' => 'string',
+        'name' => 'string',
     ];
 
-
-    public function products(): BelongsToMany
+    /**
+     * @return HasMany
+     */
+    public function products(): HasMany
     {
-        return $this->belongsToMany(Product::class);
+        return $this->hasMany(Product::class);
     }
-
 }

@@ -3,7 +3,7 @@
 namespace App\Repositories\Account\Auth;
 
 use App\Repositories\Account\Auth\AuthRepositoryInterface;
-use App\Models\AccountModels\User;
+use App\Models\Account\User;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\UpdateUserRequest;
 use Illuminate\Support\Facades\Hash;
@@ -43,8 +43,7 @@ class AuthRepository implements AuthRepositoryInterface
 
     public function updateUser(UpdateUserRequest $request)
     {
-      $user_id = Auth::id();
-      $user = User::findOrFail( $user_id);
+      $user = User::findOrFail(Auth::id());
       return $user->update($request->all());
     }
 

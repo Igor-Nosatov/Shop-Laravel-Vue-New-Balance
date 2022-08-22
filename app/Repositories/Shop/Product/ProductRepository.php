@@ -7,5 +7,8 @@ use App\Repositories\Shop\Product\ProductRepositoryInterface;
 
 class ProductRepository implements ProductRepositoryInterface
 {
+    public function getProductDataById()
+    {
 
+    }
 }

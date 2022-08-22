@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Models\ShopModels;
+namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-/**
- *
- */
-class Color extends Model
+
+class Image extends Model
 {
     use HasFactory;
-    
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<string>
      */
     protected $fillable = [
-        'name'
+        'path',
     ];
 
     /**
@@ -28,14 +26,13 @@ class Color extends Model
      * @var array<string>
      */
     protected $casts = [
-        'name' => 'string',
+        'path' => 'string',
     ];
 
-    /**
-     * @return BelongsToMany
-     */
+
     public function products(): BelongsToMany
     {
         return $this->belongsToMany(Product::class);
     }
+
 }
